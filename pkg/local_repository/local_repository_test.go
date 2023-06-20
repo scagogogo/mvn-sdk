@@ -1,7 +1,7 @@
 package local_repository
 
 import (
-	"github.com/scagogogo/mvn-sdk/pkg/checker"
+	"github.com/scagogogo/mvn-sdk/pkg/finder"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
