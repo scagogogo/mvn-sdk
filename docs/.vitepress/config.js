@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Maven SDK Go',
   description: 'A Go SDK for Maven operations',
-  base: '/mvn-sdk/',
+  base: process.env.NODE_ENV === 'production' ? '/mvn-sdk/' : '/',
   
   themeConfig: {
     nav: [
