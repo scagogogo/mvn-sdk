@@ -39,3 +39,38 @@ Thumbs.db
 
 # Maven distribution files (for testing)
 data/apache-maven-*/
+
+# Node.js dependencies and build artifacts
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VitePress build artifacts
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+
+# Package manager lock files (keep package-lock.json but ignore others)
+yarn.lock
+pnpm-lock.yaml
+
+# Test reports and output files
+test_report.*
+*.test
+coverage.out
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Editor backup and temporary files
+*.bak
+*.orig
+*.rej
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
