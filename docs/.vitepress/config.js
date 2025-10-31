@@ -3,6 +3,18 @@ module.exports = {
   description: 'A Go SDK for Maven operations',
   base: process.env.NODE_ENV === 'production' ? '/mvn-sdk/' : '/',
   
+  // 多语言配置
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en-US'
+    },
+    zh: {
+      label: '简体中文',
+      lang: 'zh-CN'
+    }
+  },
+  
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
