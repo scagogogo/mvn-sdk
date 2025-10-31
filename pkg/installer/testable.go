@@ -19,7 +19,7 @@ type InstallOptions struct {
 // 默认的安装选项
 func DefaultInstallOptions() InstallOptions {
 	return InstallOptions{
-		MavenURL:     "https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz",
+		MavenURL:     "https://archive.apache.org/dist/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz",
 		HomeDir:      "",
 		SkipEnvSetup: false,
 	}
@@ -62,7 +62,7 @@ func InstallMacOSWithOptions(options InstallOptions) (string, error) {
 		if err != nil {
 			return err
 		}
-		if info.IsDir() && filepath.Base(path) == "apache-maven-3.9.6" {
+		if info.IsDir() && filepath.Base(path) == "apache-maven-3.9.11" {
 			mavenHome = path
 			return filepath.SkipDir
 		}

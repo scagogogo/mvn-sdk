@@ -44,7 +44,7 @@ func tryHomebrewInstall() (bool, string) {
 // 从二进制包安装macOS版本的Maven
 func installFromBinaryMacOS() (string, error) {
 	// 使用与Linux相同的tar.gz包
-	mavenURL := "https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz"
+	mavenURL := "https://archive.apache.org/dist/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz"
 
 	mavenHome, err := installFromTarGz(mavenURL)
 	if err != nil {

@@ -15,7 +15,7 @@ import (
 // InstallWindows 在Windows系统上安装Maven
 func InstallWindows() (string, error) {
 	// Maven下载地址
-	mavenURL := "https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.zip"
+	mavenURL := "https://archive.apache.org/dist/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.zip"
 	// 安装目录
 	homeDir, err := os.UserHomeDir()
 	if err != nil {

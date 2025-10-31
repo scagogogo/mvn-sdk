@@ -66,7 +66,7 @@ func tryPackageManagerLinux() (bool, string) {
 // 从二进制包安装
 func installFromBinaryLinux() (string, error) {
 	// Maven下载地址
-	mavenURL := "https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz"
+	mavenURL := "https://archive.apache.org/dist/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz"
 	// 安装目录
 	homeDir, err := os.UserHomeDir()
 	if err != nil {

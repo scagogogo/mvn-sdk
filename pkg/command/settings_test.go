@@ -6,7 +6,9 @@ import (
 )
 
 func TestLocalRepository(t *testing.T) {
-	repoDirectory, err := GetLocalRepositoryDirectory("D:\\soft\\apache-maven-3.8.5\\bin\\mvn")
+	// 使用系统PATH中的mvn，或者使用环境变量
+	executable := "mvn"
+	repoDirectory, err := GetLocalRepositoryDirectory(executable)
 	assert.Nil(t, err)
 	assert.NotEmpty(t, repoDirectory)
 	t.Log(repoDirectory)

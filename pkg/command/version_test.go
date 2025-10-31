@@ -6,7 +6,9 @@ import (
 )
 
 func TestVersion(t *testing.T) {
-	version, err := Version("D:\\soft\\apache-maven-3.8.5\\bin\\mvn")
+	// 使用系统PATH中的mvn
+	executable := "mvn"
+	version, err := Version(executable)
 	assert.Nil(t, err)
 	assert.NotEmpty(t, version)
 	t.Log(version)

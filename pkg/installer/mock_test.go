@@ -22,7 +22,7 @@ type mockMaven struct {
 // 创建一个模拟的Maven结构用于测试
 func createMockMaven() mockMaven {
 	return mockMaven{
-		Version:  "3.9.6",
+		Version:  "3.9.11",
 		BinFiles: []string{"mvn", "mvnDebug"},
 		LibFiles: []string{"maven-core.jar", "maven-model.jar"},
 		ConfFiles: []string{
@@ -171,20 +171,20 @@ func createMockMavenServer(t *testing.T) (*httptest.Server, string) {
 	}
 
 	// 创建模拟的Maven tar.gz文件
-	mockTarPath := filepath.Join(tempDir, "apache-maven-3.9.6-bin.tar.gz")
+	mockTarPath := filepath.Join(tempDir, "apache-maven-3.9.11-bin.tar.gz")
 	if err := createMockMavenTarGz(t, mockTarPath); err != nil {
 		t.Fatalf("创建模拟Maven包失败: %v", err)
 	}
 
 	// 处理Maven下载请求
-	mux.HandleFunc("/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz", func(w http.ResponseWriter, r *http.Request) {
 		data, err := os.ReadFile(mockTarPath)
 		if err != nil {
 			http.Error(w, "读取文件失败", http.StatusInternalServerError)
 			return
 		}
 		w.Header().Set("Content-Type", "application/octet-stream")
-		w.Header().Set("Content-Disposition", "attachment; filename=apache-maven-3.9.6-bin.tar.gz")
+		w.Header().Set("Content-Disposition", "attachment; filename=apache-maven-3.9.11-bin.tar.gz")
 		w.Write(data)
 	})
 
@@ -200,7 +200,7 @@ func TestInstallMacOSWithMock(t *testing.T) {
 	defer server.Close()
 
 	// 设置模拟URL
-	mockURL := server.URL + "/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz"
+	mockURL := server.URL + "/maven/maven-3/3.9.11/binaries/apache-maven-3.9.11-bin.tar.gz"
 
 	// 创建测试目录
 	testHomeDir, err := os.MkdirTemp("", "maven-test-home")
