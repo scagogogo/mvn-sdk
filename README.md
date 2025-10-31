@@ -12,7 +12,11 @@ A Go SDK for conveniently operating `mvn` in Go. It detects and uses the locally
 go get -u github.com/scagogogo/mvn-sdk
 ```
 
-## 3. Examples
+## 3. Documentation
+
+Full API documentation is available at: https://scagogogo.github.io/mvn-sdk/
+
+## 4. Examples
 
 Find locally installed mvn:
 

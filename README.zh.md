@@ -12,7 +12,11 @@
 go get -u github.com/scagogogo/mvn-sdk
 ```
 
-# 三、Example
+# 三、文档
+
+完整的API文档可在以下地址访问：https://scagogogo.github.io/mvn-sdk/
+
+# 四、Example
 
 寻找本地安装的mvn： 
 
