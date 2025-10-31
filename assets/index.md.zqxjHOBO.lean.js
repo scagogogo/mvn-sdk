@@ -1,0 +1,1 @@
+import{_ as a,c as i,o as n,ae as e}from"./chunks/framework.rWD0TKqQ.js";const c=JSON.parse('{"title":"Maven SDK Go","description":"","frontmatter":{},"headers":[],"relativePath":"index.md","filePath":"index.md"}'),t={name:"index.md"};function l(h,s,p,r,k,o){return n(),i("div",null,[...s[0]||(s[0]=[e("",13)])])}const g=a(t,[["render",l]]);export{c as __pageData,g as default};
