@@ -8,7 +8,7 @@ on:
 
 # 设置权限
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -54,3 +54,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs/.vitepress/dist
+        force_orphan: true
