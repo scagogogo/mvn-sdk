@@ -74,3 +74,46 @@ pids
 *.pid
 *.seed
 *.pid.lock
+
+# Go workspace files
+go.work
+go.work.sum
+
+# Go vendor directory
+vendor/
+
+# Go test cache
+*.testcache
+
+# Node.js
+.npm
+.eslintcache
+
+# Build outputs
+dist/
+build/
+
+# Debug files
+debug
+*.debug
+
+# Profiling data
+*.prof
+*.pprof
+
+# IDE specific files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+.idea/
+*.iml
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
